@@ -1,7 +1,14 @@
 package sorts;
-
+/**
+ * 
+ * @author Obtenido del libro Java Structures.
+ *
+ */
 public class MergeSort {
 	public static void merge(int data[], int temp[], int low, int middle, int high) {
+		/**
+		 * 
+		 */
 		int resultIndex=low;
 		int tempIndex= low;
 		int destinationIndex= middle;
