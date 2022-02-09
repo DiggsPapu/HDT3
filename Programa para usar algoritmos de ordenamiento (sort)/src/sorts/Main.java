@@ -63,40 +63,42 @@ public class Main {
             /**
              * Impresión del vector ordenado en quickSort
              */
-            System.out.println("\nVector Ordenado en quickSort");
+            System.out.println("\n\nVector ordenado en quickSort");
             for (int n : listaQuickSort) {
                 System.out.print(n + " ");
             }
-
-            System.out.print("\n");
             /**
-             * Aquí se obtiene la mitad(redondeado a abajo) para generar dos listas trabajables en Merge
+             * Impresión de la lista ordenada
+             * Ordenamiento de la lista con MergeSort
              */
-//            int getmiddle=(int) Math.floor(listaMergeSort.length/2);
-            /**
-             * La lista suelo tendrá la misma cantidad de espacios que la mitad xq comienza en 0
-             * Se añade elementos mediante for
-             */
-//            int[] listaMergeFloor = new int[getmiddle];
-//            for (int k=0; k<=getmiddle-1; k++) {
-//            	listaMergeFloor[k]=listaMergeSort[k];
-//            }
-            /**
-             * La lista techo tendrá la misma cantidad de espacios que la diferencia entre middle y la longitud
-             * Se añaden los elementos x for, donde cada elemento del techo es equivalente a l+la mitad.
-             */
-//            MergeSort.mergeSort(listaMergeSort, listaMergeSort.length);
-            System.out.print("Vector ordenado en MergeSort\n");
+            System.out.print("\n\nVector ordenado en MergeSort\n");
             MergeSort.mergeSort(listaMergeSort, 0, listaMergeSort.length-1);
+            MergeSort.mergeSort(listaMergeSort, 0, listaMergeSort.length-1);
+            
             for (int n : listaMergeSort) {
                 System.out.print(n + " ");
             }
-
+            
+            System.out.print("\n\nVector ordenado en GnomeSort\n");
+            GnomeSort.gnomeSort(listaGnomeSort, listaGnomeSort.length);
+            GnomeSort.gnomeSort(listaGnomeSort, listaGnomeSort.length);
+            
+            for (int n : listaGnomeSort) {
+                System.out.print(n + " ");
+            }
+            
+            System.out.print("\n\n\nVector ordenado en RadixSort\n");
+            RadixSort.radixSort(listaGnomeSort, listaGnomeSort.length);
+            RadixSort.radixSort(listaGnomeSort, listaGnomeSort.length);
+            
+            for (int n : listaGnomeSort) {
+                System.out.print(n + " ");
+            }
         }
         
         
         catch (Exception e) {
-        	System.out.print("El valor ingresado no es un número entero");
+        	System.out.print("\nEl valor ingresado no es un número entero");
         }
         	
         
