@@ -34,19 +34,24 @@ public class Main {
         	int cantidadNum = Integer.parseInt(cantidadStr);
         	
         	int[] listaQuickSort = new int[cantidadNum];
+        	 int[] listaMergeSort = new int[cantidadNum];
+         	int[] listaRadixSort = new int[cantidadNum];
+         	int[] listaGnomeSort = new int[cantidadNum];
+         	int[] listaHeapSort = new int[cantidadNum];
             Random rnd = new Random();
             System.out.println("Vector desordenado");
             for (int i = 0; i < listaQuickSort.length; i++) {
                 listaQuickSort[i] = rnd.nextInt(3000);
+                /**
+            	 * Se replicarán las listas que se generen en el primer método para comparar la misma cantidad de tamaños.
+            	 */
+                listaMergeSort[i]= listaQuickSort[i];
+                listaRadixSort[i]= listaQuickSort[i];
+                listaGnomeSort[i]= listaQuickSort[i];
+                listaHeapSort[i]= listaQuickSort[i];
                 System.out.print(listaQuickSort[i] + " ");
             }
-            /**
-        	 * Se replicarán las listas que se generen en el primer método para comparar la misma cantidad de tamaños.
-        	 */
-            int[] listaMergeSort = listaQuickSort;
-        	int[] listaRadixSort = listaQuickSort;
-        	int[] listaGnomeSort = listaQuickSort;
-        	int[] listaHeapSort = listaQuickSort;
+            
         	/**
         	 * Se ordena mediante quickSort
         	 */
@@ -62,8 +67,34 @@ public class Main {
             for (int n : listaQuickSort) {
                 System.out.print(n + " ");
             }
-//            mergeSortRecursive(listaMergeSort, );
+
+            System.out.print("\n");
+            /**
+             * Aquí se obtiene la mitad(redondeado a abajo) para generar dos listas trabajables en Merge
+             */
+//            int getmiddle=(int) Math.floor(listaMergeSort.length/2);
+            /**
+             * La lista suelo tendrá la misma cantidad de espacios que la mitad xq comienza en 0
+             * Se añade elementos mediante for
+             */
+//            int[] listaMergeFloor = new int[getmiddle];
+//            for (int k=0; k<=getmiddle-1; k++) {
+//            	listaMergeFloor[k]=listaMergeSort[k];
+//            }
+            /**
+             * La lista techo tendrá la misma cantidad de espacios que la diferencia entre middle y la longitud
+             * Se añaden los elementos x for, donde cada elemento del techo es equivalente a l+la mitad.
+             */
+//            MergeSort.mergeSort(listaMergeSort, listaMergeSort.length);
+            System.out.print("Vector ordenado en MergeSort\n");
+            MergeSort.mergeSort(listaMergeSort, 0, listaMergeSort.length-1);
+            for (int n : listaMergeSort) {
+                System.out.print(n + " ");
+            }
+
         }
+        
+        
         catch (Exception e) {
         	System.out.print("El valor ingresado no es un número entero");
         }
