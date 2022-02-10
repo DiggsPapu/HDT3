@@ -34,7 +34,7 @@ public class Main {
         	int cantidadNum = Integer.parseInt(cantidadStr);
         	
         	int[] listaQuickSort = new int[cantidadNum];
-        	 int[] listaMergeSort = new int[cantidadNum];
+        	int[] listaMergeSort = new int[cantidadNum];
          	int[] listaRadixSort = new int[cantidadNum];
          	int[] listaGnomeSort = new int[cantidadNum];
          	int[] listaHeapSort = new int[cantidadNum];
