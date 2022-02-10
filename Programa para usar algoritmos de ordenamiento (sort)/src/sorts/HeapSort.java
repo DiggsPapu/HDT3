@@ -5,7 +5,7 @@ package sorts;
  *
  */
 public class HeapSort {
-	public static void sort(int arr[])
+	public static void heapSort(int arr[])
     {
         int n = arr.length;
  

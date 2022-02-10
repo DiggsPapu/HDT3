@@ -88,10 +88,18 @@ public class Main {
             }
             
             System.out.print("\n\n\nVector ordenado en RadixSort\n");
-            RadixSort.radixSort(listaGnomeSort, listaGnomeSort.length);
-            RadixSort.radixSort(listaGnomeSort, listaGnomeSort.length);
+            RadixSort.radixSort(listaRadixSort, listaRadixSort.length);
+            RadixSort.radixSort(listaRadixSort, listaRadixSort.length);
             
-            for (int n : listaGnomeSort) {
+            for (int n : listaRadixSort) {
+                System.out.print(n + " ");
+            }
+            
+            System.out.print("\n\n\nVector ordenado en HeapSort\n");
+            HeapSort.heapSort(listaHeapSort);
+            HeapSort.heapSort(listaHeapSort);
+            
+            for (int n : listaHeapSort) {
                 System.out.print(n + " ");
             }
         }

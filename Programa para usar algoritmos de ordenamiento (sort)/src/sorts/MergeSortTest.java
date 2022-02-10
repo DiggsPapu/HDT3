@@ -41,10 +41,16 @@ class MergeSortTest {
 	@Test
 	public void testMergeSort() {
 		Random rnd= new Random();
-		int randomValue3 = rnd.nextInt(listaPrueba.length);
+		
 		for (int longitud=0; longitud<=listaMergeSort.length; longitud++) {
-			QuickSort.quickSort(listaMergeSort, 0, listaMergeSort.length - 1);
+			/**
+			 * Dado que seleccionamos un rango de posiciones de lista [20-(length-100)]
+			 * Y entonces el garbage collector se llevará los valores random que ya no usemos.
+			 */
+			int randomValue3 = 20+rnd.nextInt(listaPrueba.length-100);
+			MergeSort.mergeSort(listaMergeSort, 0, listaMergeSort.length - 1);
 			assertEquals(listaPrueba[randomValue3],listaMergeSort[randomValue3]);
 		}
+		
 	}
 }

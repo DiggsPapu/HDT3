@@ -9,38 +9,41 @@ import org.junit.jupiter.api.Test;
 class RadixSortTest {
 	/**
 	 * Creación de la lista a ser evaluada Atributo1
-	 * Creación de la lista con la que se comparará Atributo2
+	 * La lista tiene una cantidad de elementos [200-5890]
 	 */
-	int[] listaRadixSort = new int[300];
-	int[] listaPrueba =new int[300];
+	Random rnd= new Random();
+	int randomValue = 200+rnd.nextInt(5890);
+	int[] listaRadixSort = new int[randomValue];
 	/**
 	 * RadixSortTest()
 	 * Básicamente es un constructor
 	 * Aquí es donde se añaden los elementos a cada lista.
-	 * Para la lista de prueba se añaden en orden ascendente.
-	 * Para la lista a evaluar son añadidos en orden descendente
+	 * Para la lista a evaluar se añaden en orden descendente.
 	 */
 	public RadixSortTest() {
-		
-		for(int counter=0; counter<listaPrueba.length; counter++) {
-			this.listaPrueba[counter]=183*counter;
-		}
-		
 		for(int counter2=0; counter2<listaRadixSort.length; counter2++) {
-			this.listaRadixSort[counter2]=listaPrueba[listaPrueba.length-1-counter2];
+			this.listaRadixSort[counter2]=-counter2;
 		}
 		
 	}
 	/**
 	 * Se realiza el test.
-	 * Si realmente ordena cualquier valor en cualquier posición será idéntico.
+	 * Si realmente ordena de forma ascendente
+	 * entonces el k>k-1 
 	 */
 	@Test
 	public void testRadixSort() {
 		Random rnd= new Random();
-		int randomValue = rnd.nextInt(listaPrueba.length);
-		QuickSort.quickSort(listaRadixSort, 0, listaRadixSort.length - 1);
-		assertEquals(listaPrueba[randomValue],listaRadixSort[randomValue]);
+		/**
+		 * Para la selección del rango que se evaluará mínimo podría ser de la posición 10
+		 * y máximo de la longitud-100 por lo que no hay problema al evaluarlo
+		 */
+		int randomValue = 10+rnd.nextInt((listaRadixSort.length-100));
+		RadixSort.radixSort(listaRadixSort, listaRadixSort.length);
+		for (int k=1; k>=10; k++) {
+			assertTrue(listaRadixSort[randomValue-k]>listaRadixSort[randomValue-k-1]);
+		}
+		
 	}
 
 }
