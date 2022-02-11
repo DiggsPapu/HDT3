@@ -3,6 +3,7 @@
  */
 package sorts;
 public class QuickSort {
+	
     public static void quickSort(int[] vector, int izquierda, int derecha) {
         /**
          * Creación de atributos, el pivote, el contador para movernos por el subconjunto de la izquierda y de la derecha, además , del valor para hacer intercambio.

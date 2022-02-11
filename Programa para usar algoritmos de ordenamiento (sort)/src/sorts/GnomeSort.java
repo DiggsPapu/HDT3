@@ -1,6 +1,11 @@
 package sorts;
 
 public class GnomeSort {
+	/**
+	 * 
+	 * @param arr
+	 * @param n
+	 */
 	    static void gnomeSort(int arr[], int n)
 	    {
 	        int index = 0;

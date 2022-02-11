@@ -55,11 +55,12 @@ public class Main {
         	/**
         	 * Se ordena mediante quickSort
         	 */
+            
             QuickSort.quickSort(listaQuickSort, 0, listaQuickSort.length - 1);
             /**
              * Ordenamiento de una lista ya ordenada mediante quicksort
              */
-            QuickSort.quickSort(listaQuickSort, 0, listaQuickSort.length-1);
+           
             /**
              * Impresión del vector ordenado en quickSort
              */
@@ -73,7 +74,7 @@ public class Main {
              */
             System.out.print("\n\nVector ordenado en MergeSort\n");
             MergeSort.mergeSort(listaMergeSort, 0, listaMergeSort.length-1);
-            MergeSort.mergeSort(listaMergeSort, 0, listaMergeSort.length-1);
+            
             
             for (int n : listaMergeSort) {
                 System.out.print(n + " ");
@@ -81,7 +82,7 @@ public class Main {
             
             System.out.print("\n\nVector ordenado en GnomeSort\n");
             GnomeSort.gnomeSort(listaGnomeSort, listaGnomeSort.length);
-            GnomeSort.gnomeSort(listaGnomeSort, listaGnomeSort.length);
+            
             
             for (int n : listaGnomeSort) {
                 System.out.print(n + " ");
@@ -89,7 +90,7 @@ public class Main {
             
             System.out.print("\n\n\nVector ordenado en RadixSort\n");
             RadixSort.radixSort(listaRadixSort, listaRadixSort.length);
-            RadixSort.radixSort(listaRadixSort, listaRadixSort.length);
+            
             
             for (int n : listaRadixSort) {
                 System.out.print(n + " ");
@@ -97,21 +98,22 @@ public class Main {
             
             System.out.print("\n\n\nVector ordenado en HeapSort\n");
             HeapSort.heapSort(listaHeapSort);
-            HeapSort.heapSort(listaHeapSort);
+            
             
             for (int n : listaHeapSort) {
                 System.out.print(n + " ");
             }
+            String directorio = scanner.nextLine();
+            HeapSort.heapSort(listaHeapSort);
+            MergeSort.mergeSort(listaMergeSort, 0, listaMergeSort.length-1);
+            QuickSort.quickSort(listaQuickSort, 0, listaQuickSort.length-1);
+            GnomeSort.gnomeSort(listaGnomeSort, listaGnomeSort.length);
+            RadixSort.radixSort(listaRadixSort, listaRadixSort.length);
         }
-        
         
         catch (Exception e) {
         	System.out.print("\nEl valor ingresado no es un número entero");
         }
-        	
-        
-        
-
     }
 
 }
