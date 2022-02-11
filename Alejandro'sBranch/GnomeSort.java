@@ -6,7 +6,7 @@
 package sorts;
 
 public class GnomeSort {
-	    static void gnomeSort(int arr[], int n)
+	    static void gnomeSort(int datos[], int length)
 	    {
 			/**
 			 * Hacer el indice inicial 0
@@ -16,7 +16,7 @@ public class GnomeSort {
 			/**
 			 * crear un loop while que corre la cantidad de elementos que hay en el array
 			 */
-	        while (index < n) {
+	        while (index < length) {
 			/**
 			 * Incrementar el indice si es igual a 0
 			 */
@@ -25,16 +25,16 @@ public class GnomeSort {
 				/**
 				 * Buscar el elemento mas grande y guardar su indice
 				 */
-	            if (arr[index] >= arr[index - 1])
+	            if (datos[index] >= datos[index - 1])
 	                index++;
 				/**
 				 * Crear una copia temporal y hacer los cambios en el array segun el algoritmo gnome
 				 */
 	            else {
 	                int temp = 0;
-	                temp = arr[index];
-	                arr[index] = arr[index - 1];
-	                arr[index - 1] = temp;
+	                temp = datos[index];
+	                datos[index] = datos[index - 1];
+	                datos[index - 1] = temp;
 	                index--;
 	            }
 	        }

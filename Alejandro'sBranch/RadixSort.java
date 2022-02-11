@@ -5,7 +5,6 @@ package sorts;
  *
  */
 public class RadixSort {
-	// Radix Sort in Java Programming
 	/**
 	 * Se utiliza counting sort para determinar los elementos en los lugares significantes.
 	 */
