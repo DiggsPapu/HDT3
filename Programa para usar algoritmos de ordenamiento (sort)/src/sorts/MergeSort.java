@@ -99,6 +99,8 @@ public class MergeSort {
 	   public static void mergeSort(int data[], int low, int length){
 		   /**
 		    * Sí el menor es menor que el mayor
+		    * @Function
+		    * La funci[on es de merge
 		    */
 	        if (low < length) {
 	        	/**
