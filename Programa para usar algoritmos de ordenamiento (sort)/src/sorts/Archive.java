@@ -39,7 +39,8 @@ public class Archive {
 			}
 		}
 		catch (Exception e) {
-			System.out.print("El archivo no es posible de ordenar dado que no solo posee números");
+			System.out.print("El archivo no es posible de ordenar dado que no solo posee números\n");
+			this.lista=null;
 		}
 	}
 	/**
@@ -68,6 +69,7 @@ public class Archive {
 			    e.printStackTrace();
 			    System.out.print("\nEl texto contiene valores no enteros, por lo que es inválido\n");
 			    setLista(null);
+			    
 			    }
 		}
 		else {

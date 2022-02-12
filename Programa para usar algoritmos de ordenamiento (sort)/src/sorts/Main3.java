@@ -61,90 +61,10 @@ public class Main3 {
                      * Se instancia objeto archivo para el manejo del texto
                      */
                     Archive archive2= new Archive(directory1);
-                    /**
-                     * Se crean los diferentes vectores desordenados para cada sort
-                     */
-                    int[] listaQuickSort = new int[archive2.getLista().length];
-                	int[] listaMergeSort = new int[archive2.getLista().length];
-                 	int[] listaRadixSort = new int[archive2.getLista().length];
-                 	int[] listaGnomeSort = new int[archive2.getLista().length];
-                 	int[] listaHeapSort = new int[archive2.getLista().length];
-                    System.out.println("Vector desordenado");
-                    for (int i = 0; i < listaQuickSort.length; i++) {
-                        listaQuickSort[i] = archive2.getLista()[i];
-                        /**
-                    	 * Se replicarán las listas que se generen en el primer método para comparar la misma cantidad de tamaños.
-                    	 */
-                        listaMergeSort[i]= listaQuickSort[i];
-                        listaRadixSort[i]= listaQuickSort[i];
-                        listaGnomeSort[i]= listaQuickSort[i];
-                        listaHeapSort[i]= listaQuickSort[i];
-                        /**
-                         * 
-                         */
-                        
-                    }
-
-                	/**
-                	 * Se ordena mediante quickSort
-                	 */
-                    SortsTypes.quickSort(listaQuickSort, 0, listaQuickSort.length - 1);
-                    /**
-                     * Ordenamiento de una lista ya ordenada mediante quicksort
-                     */
-                    SortsTypes.quickSort(listaQuickSort, 0, listaQuickSort.length-1);
-                    /**
-                     * Impresión del vector ordenado en quickSort
-                     */
-                    System.out.println("\n\nVector ordenado en quickSort");
-                    for (int n : listaQuickSort) {
-                        System.out.print(n + " ");
-                    }
-                    /**
-                     * Impresión de la lista ordenada
-                     * Ordenamiento de la lista con MergeSort
-                     */
-                    System.out.print("\n\nVector ordenado en MergeSort\n");
-                    SortsTypes.mergeSort(listaMergeSort, 0, listaMergeSort.length-1);
-                    SortsTypes.mergeSort(listaMergeSort, 0, listaMergeSort.length-1);
                     
-                    for (int n : listaMergeSort) {
-                        System.out.print(n + " ");
+                    if (archive2.getLista()!=null) {
+                    	SortsTypes.sortsExecute(archive2);
                     }
-                    /**
-                     * Impresión de la lista ordenada
-                     * Ordenamiento de la lista con GnomeSort
-                     */
-                    System.out.print("\n\nVector ordenado en GnomeSort\n");
-                    SortsTypes.gnomeSort(listaGnomeSort, listaGnomeSort.length);
-                    SortsTypes.gnomeSort(listaGnomeSort, listaGnomeSort.length);
-                    
-                    for (int n : listaGnomeSort) {
-                        System.out.print(n + " ");
-                    }
-                    /**
-                     * Impresión de la lista ordenada
-                     * Ordenamiento de la lista con RadixSort
-                     */
-                    System.out.print("\n\n\nVector ordenado en RadixSort\n");
-                    SortsTypes.radixSort(listaRadixSort, listaRadixSort.length);
-                    SortsTypes.radixSort(listaRadixSort, listaRadixSort.length);
-                    
-                    for (int n : listaRadixSort) {
-                        System.out.print(n + " ");
-                    }
-                    /**
-                     * Impresión de la lista ordenada
-                     * Ordenamiento de la lista con HeapSort
-                     */
-                    System.out.print("\n\n\nVector ordenado en HeapSort\n");
-                    SortsTypes.heapSort(listaHeapSort);
-                    SortsTypes.heapSort(listaHeapSort);
-                    
-                    for (int n : listaHeapSort) {
-                        System.out.print(n + " ");
-                    }
-                    System.out.print("\n\nGracias por utilizar nuestro programa.\n");
                     
             	}
                 	
